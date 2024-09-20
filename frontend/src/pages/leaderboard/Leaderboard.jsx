@@ -62,7 +62,7 @@ const Leaderboard = () => {
                     <p>{index + 1}.</p>
                     {index === 0 && <FaMedal color="gold" />}
                     {index === 1 && <FaMedal color="silver" />}
-                    {index === 2 && <FaMedal color="bronze" />}
+                    {index === 2 && <FaMedal color="brown" />}
                   </div>
                   <p className="name">{player.playerName}</p>
                   <p className="score">{player.score} Points</p>

@@ -281,7 +281,7 @@ const Game = () => {
               </button>
               <div className="card">{resultCard(type)}</div>
               {type === "bomb" && (
-                <p style={{ fontSize: "12px", textAlign: "center" }}>
+                <p className="defuseMessage">
                   Defuse card saved you from explosion{" :)"}
                 </p>
               )}
