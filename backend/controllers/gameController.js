@@ -16,6 +16,7 @@ const saveAction = async (req, res) => {
 
     res.status(200).json({ message: "Action saved successfully" });
   } catch (error) {
+    console.log(error);
     res.status(500).json({ message: error.message });
   }
 };
@@ -49,6 +50,8 @@ const loadOrCreateGame = async (req, res) => {
       });
     }
   } catch (error) {
+    c;
+    console.log(error);
     res.status(500).json({ message: error.message });
   }
 };
