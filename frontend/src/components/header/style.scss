@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  background-color: var(--bg1);
+  background-color: var(--bg2);
   height: 70px;
   min-width: 300px;
 
@@ -17,13 +17,13 @@
     svg {
       font-size: 30px;
       margin-top: 6px;
-      color: var(--text1);
+      color: white;
       @include md {
         font-size: 40px;
       }
     }
     p {
-      color: var(--text1);
+      color: white;
       font-size: 20px;
       font-weight: 500;
       &::first-letter {

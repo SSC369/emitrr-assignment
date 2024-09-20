@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Cookie from "js-cookie";
 import toast, { Toaster } from "react-hot-toast";
 import "../style.scss";
+import { TailSpin } from "react-loader-spinner";
 import axios from "axios";
 
 const Login = () => {
@@ -10,7 +11,7 @@ const Login = () => {
     password: "",
     email: "",
   });
-
+  const [loading, setLoading] = useState(false);
   const [showPass, setShowPass] = useState(false);
 
   const navigate = useNavigate();
@@ -38,7 +39,7 @@ const Login = () => {
 
     try {
       const { email, password } = userData;
-
+      setLoading(true);
       if (handleValidation()) {
         const host = `${import.meta.env.VITE_SERVER}/api/auth/login`;
 
@@ -66,6 +67,8 @@ const Login = () => {
       }
     } catch (error) {
       toast.error(error.response.data.message, { duration: 1000 });
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -118,7 +121,22 @@ const Login = () => {
           />
           <label htmlFor="check">Show Password</label>
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit">
+          {loading ? (
+            <TailSpin
+              visible={true}
+              height="30"
+              width="30"
+              color="#fff"
+              ariaLabel="tail-spin-loading"
+              radius="1"
+              wrapperStyle={{}}
+              wrapperClass=""
+            />
+          ) : (
+            "Submit"
+          )}
+        </button>
         <p>
           Create an account
           <Link style={{ textDecoration: "none" }} to={"/register"}>

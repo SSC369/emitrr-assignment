@@ -77,7 +77,7 @@ const Register = () => {
             email: "",
             confirmPassword: "",
           });
-          setLoading(false);
+
           toast.success("Registered Successfully", {
             duration: 1000,
           });
@@ -88,6 +88,8 @@ const Register = () => {
       }
     } catch (error) {
       toast.error(error.response.data.message, { duration: 1000 });
+    } finally {
+      setLoading(false);
     }
   };
 

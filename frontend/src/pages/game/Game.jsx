@@ -240,7 +240,7 @@ const Game = () => {
         <div className="modal">
           {defuseCards < 0 && type === "bomb" ? (
             <div style={{ border: "2px solid crimson" }} className="cardResult">
-              {resultTitle(type)}
+              <div className="cardTitle">{resultTitle(type)}</div>
               <button
                 onClick={() => navigate("/")}
                 className="repeatButton"
@@ -268,7 +268,7 @@ const Game = () => {
             </div>
           ) : (
             <div className="cardResult">
-              {resultTitle(type)}
+              <div className="cardTitle">{resultTitle(type)}</div>
 
               <button
                 onClick={() => {
@@ -281,7 +281,9 @@ const Game = () => {
               </button>
               <div className="card">{resultCard(type)}</div>
               {type === "bomb" && (
-                <p>Defuse card saved you from explosion{" :)"}</p>
+                <p style={{ fontSize: "12px", textAlign: "center" }}>
+                  Defuse card saved you from explosion{" :)"}
+                </p>
               )}
               <p className="defuse">Defuse Cards: {defuseCards}</p>
             </div>

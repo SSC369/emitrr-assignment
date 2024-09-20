@@ -3,8 +3,8 @@
 .home {
   min-width: 300px;
   background-color: var(--bg1);
-  color: var(--text1);
-  min-height: 100vh;
+  color: white;
+  min-height: calc(100dvh - 70px);
   padding-bottom: 20px;
   @include md {
     background-image: url("../../assets//image.png");
