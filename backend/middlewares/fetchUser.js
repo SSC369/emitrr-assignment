@@ -16,6 +16,7 @@ const fetchUser = (req, res, next) => {
     req.user = data;
     next();
   } catch (error) {
+    console.log(error);
     return res.status(500).json({
       message: error.message,
     });
