@@ -1,0 +1,116 @@
+@import "../mixins.scss";
+
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  color: var(--text1);
+  background-color: var(--bg1);
+  min-width: 300px;
+  min-height: 100dvh;
+  @include md {
+    background-image: url("../assets/image.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+
+  .formContainer {
+    background-color: var(--bg2);
+    padding: 20px 0px;
+    width: 80%;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+
+    h2 {
+      font-size: 20px;
+      color: var(--text2);
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+    .inputContainer {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      margin-bottom: 10px;
+
+      label {
+        margin-bottom: 4px;
+        font-weight: 500;
+        color: var(--text1);
+        letter-spacing: 0.5px;
+        font-size: 14px;
+      }
+      input {
+        border: none;
+        height: 40px;
+        padding: 0px 10px;
+        border-radius: 6px;
+        color: var(--text1);
+        background-color: var(--bg1);
+        font-weight: 500;
+        outline: none;
+        font-size: 12px;
+
+        &::-webkit-input-placeholder {
+          color: var(--text1);
+          font-weight: 400;
+          font-size: 12px;
+        }
+      }
+    }
+    .checkbox {
+      width: 80%;
+      display: flex;
+      align-items: center;
+      input {
+        height: 16px;
+        width: 16px;
+      }
+      label {
+        margin-left: 10px;
+        font-size: 14px;
+      }
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      span {
+        color: var(--text2);
+      }
+    }
+    p {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text1);
+      margin-top: 10px;
+      span {
+        margin-left: 10px;
+        color: crimson;
+        font-weight: 600;
+        font-size: 16px;
+      }
+    }
+    button {
+      height: 40px;
+      border: none;
+      font-size: 14px;
+      border-radius: 6px;
+      background: crimson;
+      color: white;
+      font-weight: 400;
+      padding: 10px;
+      width: 100px;
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

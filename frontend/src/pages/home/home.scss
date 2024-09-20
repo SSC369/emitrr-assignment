@@ -1,0 +1,88 @@
+@import "../../mixins.scss";
+
+.home {
+  min-width: 300px;
+  background-color: var(--bg1);
+  color: var(--text1);
+  min-height: 100vh;
+  padding-bottom: 20px;
+  @include md {
+    background-image: url("../../assets//image.png");
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .packer {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    width: 80%;
+    margin: 0px auto;
+    max-width: 800px;
+
+    .title {
+      display: flex;
+      align-items: center;
+      h1 {
+        font-size: 20px;
+        @include md {
+          font-size: 30px;
+        }
+        span {
+          color: var(--text2);
+        }
+      }
+      p {
+        margin-left: 4px;
+        margin-top: 6px;
+        svg {
+          font-size: 30px;
+          color: orange;
+        }
+      }
+    }
+    .intro {
+      h3 {
+        color: var(--text2);
+      }
+    }
+    .object {
+      h3 {
+        color: var(--text2);
+      }
+    }
+    .gameRules {
+      h3 {
+        color: var(--text2);
+      }
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-left: 20px;
+        list-style: decimal;
+      }
+    }
+    .playButton {
+      align-self: center;
+      height: 80px;
+      width: 80px;
+      color: white;
+      background-color: crimson;
+      border: none;
+      border-radius: 100%;
+      p {
+        font-size: 20px;
+      }
+      svg {
+        font-size: 20px;
+        color: gold;
+      }
+    }
+  }
+}
